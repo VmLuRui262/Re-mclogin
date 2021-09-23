@@ -9,6 +9,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
+import org.mindrot.jbcrypt.BCrypt;
 
 public class RegisteredPlayersJson {
     private static final File REGISTERED_PLAYERS = new File("registered-players.json");
@@ -21,7 +22,7 @@ public class RegisteredPlayersJson {
 
     public static boolean isCorrectPassword(String username, String password) {
         JsonObject playerObject = findPlayerObject(username);
-        return playerObject != null && playerObject.get("password").getAsString().equals(password);
+        return playerObject != null && BCrypt.checkpw(password, playerObject.get("password").getAsString());
     }
 
     private static JsonObject findPlayerObject(String username) {
@@ -43,7 +44,7 @@ public class RegisteredPlayersJson {
         JsonObject jsonObject = new JsonObject();
         jsonObject.addProperty("uuid", uuid);
         jsonObject.addProperty("name", username);
-        jsonObject.addProperty("password", password);
+        jsonObject.addProperty("password", BCrypt.hashpw(password, BCrypt.gensalt()));
         jsonArray.add(jsonObject);
         try {
             //noinspection UnstableApiUsage
