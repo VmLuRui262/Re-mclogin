@@ -22,6 +22,7 @@ dependencies {
 	// To change the versions see the gradle.properties file
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
 	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
+	implementation 'org.mindrot:jbcrypt:0.4'
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
@@ -48,7 +49,7 @@ tasks.withType(JavaCompile).configureEach {
 
 	// Minecraft 1.17 (21w19a) upwards uses Java 16.
 	//noinspection GroovyAccessibility
-	it.options.release = 16 as Property<Integer>
+	it.options.release = 16
 }
 
 java {
