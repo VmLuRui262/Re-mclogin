@@ -1,26 +1,26 @@
 {
   "schemaVersion": 1,
-  "id": "login",
+  "id": "mclogin",
   "version": "${version}",
 
-  "name": "Login",
+  "name": "MCLogin",
   "description": "Protection for offline-mode servers",
   "authors": [
-    "Londiuh"
+    "molaeiali"
   ],
   "contact": {
-    "homepage": "https://github.com/Londiuh/login",
-    "sources": "https://github.com/Londiuh/login",
-    "issues": "https://github.com/Londiuh/login/issues"
+    "homepage": "https://github.com/molaeiali/mclogin",
+    "sources": "https://github.com/molaeiali/mclogin",
+    "issues": "https://github.com/molaeiali/mclogin/issues"
   },
 
-  "license": "MIT",
+  "license": "GPLv2",
   "icon": "",
 
   "environment": "server",
   "entrypoints": {
     "main": [
-      "me.londiuh.login.LoginMod"
+      "org.molaei.mclogin.LoginMod"
     ]
   },
   "mixins": [
@@ -28,9 +28,9 @@
   ],
 
   "depends": {
-    "fabricloader": ">=0.7.4",
+    "fabricloader": ">=0.7.11",
     "fabric": "*",
-    "minecraft": "1.16.x"
+    "minecraft": "1.17.x"
   },
   "suggests": {
     "another-mod": "*"

@@ -1,7 +1,7 @@
-package me.londiuh.login.listeners;
+package org.molaei.mclogin.listeners;
 
-import me.londiuh.login.LoginMod;
-import me.londiuh.login.PlayerLogin;
+import org.molaei.mclogin.LoginMod;
+import org.molaei.mclogin.PlayerLogin;
 import net.minecraft.server.network.ServerPlayNetworkHandler;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.LiteralText;

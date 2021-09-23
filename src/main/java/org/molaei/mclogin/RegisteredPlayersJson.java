@@ -1,4 +1,4 @@
-package me.londiuh.login;
+package org.molaei.mclogin;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -46,6 +46,7 @@ public class RegisteredPlayersJson {
         jsonObject.addProperty("password", password);
         jsonArray.add(jsonObject);
         try {
+            //noinspection UnstableApiUsage
             BufferedWriter bufferedWriter = Files.newWriter(REGISTERED_PLAYERS, StandardCharsets.UTF_8);
             bufferedWriter.write(gson.toJson(jsonArray));
             bufferedWriter.close();
@@ -59,6 +60,7 @@ public class RegisteredPlayersJson {
             return;
         }
         try {
+            //noinspection UnstableApiUsage
             BufferedReader bufferedReader = Files.newReader(REGISTERED_PLAYERS, StandardCharsets.UTF_8);
             jsonArray = gson.fromJson(bufferedReader, JsonArray.class);
         } catch (Exception e) {

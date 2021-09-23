@@ -1,7 +1,7 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "me.londiuh.login.mixin",
+  "package": "org.molaei.mclogin.mixin",
   "compatibilityLevel": "JAVA_8",
   "server": [
     "PlayerManagerMixin",

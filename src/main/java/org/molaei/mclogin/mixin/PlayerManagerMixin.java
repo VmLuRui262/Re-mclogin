@@ -1,7 +1,7 @@
-package me.londiuh.login.mixin;
+package org.molaei.mclogin.mixin;
 
-import me.londiuh.login.listeners.OnPlayerConnect;
-import me.londiuh.login.listeners.OnPlayerLeave;
+import org.molaei.mclogin.listeners.OnPlayerConnect;
+import org.molaei.mclogin.listeners.OnPlayerLeave;
 import net.minecraft.network.ClientConnection;
 import net.minecraft.server.PlayerManager;
 import net.minecraft.server.network.ServerPlayerEntity;

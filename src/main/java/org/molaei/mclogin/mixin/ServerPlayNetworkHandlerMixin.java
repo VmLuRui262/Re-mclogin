@@ -1,8 +1,8 @@
-package me.londiuh.login.mixin;
+package org.molaei.mclogin.mixin;
 
-import me.londiuh.login.listeners.OnGameMessage;
-import me.londiuh.login.listeners.OnPlayerAction;
-import me.londiuh.login.listeners.OnPlayerMove;
+import org.molaei.mclogin.listeners.OnGameMessage;
+import org.molaei.mclogin.listeners.OnPlayerAction;
+import org.molaei.mclogin.listeners.OnPlayerMove;
 import net.minecraft.network.packet.c2s.play.ChatMessageC2SPacket;
 import net.minecraft.network.packet.c2s.play.PlayerActionC2SPacket;
 import net.minecraft.network.packet.c2s.play.PlayerMoveC2SPacket;
@@ -16,6 +16,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class ServerPlayNetworkHandlerMixin {
     @Inject(method = "onPlayerMove", at = @At("HEAD"), cancellable = true)
     public void onPlayerMove(PlayerMoveC2SPacket packet, CallbackInfo ci) {
+        //noinspection ConstantConditions
         if (!OnPlayerMove.canMove((ServerPlayNetworkHandler) (Object) this)) {
             ci.cancel();
         }
@@ -23,6 +24,7 @@ public class ServerPlayNetworkHandlerMixin {
     
     @Inject(method = "onPlayerAction", at = @At("HEAD"), cancellable = true)
     public void onPlayerAction(PlayerActionC2SPacket packet, CallbackInfo ci) {
+        //noinspection ConstantConditions
         if (!OnPlayerAction.canInteract((ServerPlayNetworkHandler) (Object) this)) {
             ci.cancel(); // TODO: breaking a block desyncs with server
         }
@@ -30,6 +32,7 @@ public class ServerPlayNetworkHandlerMixin {
 
     @Inject(method = "onGameMessage", at = @At("HEAD"), cancellable = true)
     public void onGameMessage(ChatMessageC2SPacket packet, CallbackInfo ci) {
+        //noinspection ConstantConditions
         if (!OnGameMessage.canSendMessage((ServerPlayNetworkHandler) (Object) this, packet)) {
             ci.cancel();
         }

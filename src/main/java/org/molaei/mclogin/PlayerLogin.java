@@ -1,4 +1,4 @@
-package me.londiuh.login;
+package org.molaei.mclogin;
 
 import net.minecraft.server.network.ServerPlayerEntity;
 

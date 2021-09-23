@@ -1,8 +1,8 @@
-package me.londiuh.login.commands;
+package org.molaei.mclogin.commands;
 
-import me.londiuh.login.LoginMod;
-import me.londiuh.login.PlayerLogin;
-import me.londiuh.login.RegisteredPlayersJson;
+import org.molaei.mclogin.LoginMod;
+import org.molaei.mclogin.PlayerLogin;
+import org.molaei.mclogin.RegisteredPlayersJson;
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.arguments.StringArgumentType;
 import static net.minecraft.server.command.CommandManager.literal;

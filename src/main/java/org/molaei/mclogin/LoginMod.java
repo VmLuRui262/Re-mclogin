@@ -1,6 +1,6 @@
-package me.londiuh.login;
+package org.molaei.mclogin;
 
-import me.londiuh.login.commands.*;
+import org.molaei.mclogin.commands.*;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.command.v1.CommandRegistrationCallback;
 import net.minecraft.server.network.ServerPlayerEntity;
