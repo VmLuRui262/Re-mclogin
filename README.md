@@ -23,6 +23,6 @@ You need to install JDK16 and above.~~No JDK19~~
 
 你需要安装JDK16及以上。~~请不要使用JDK19~~
 
-Windows: `git clone https://github.com/VmLuRui262/Re-mclogin.git && .\gradlew.bat build`
+Windows: `git clone https://github.com/VmLuRui262/Re-mclogin.git && cd .\Re-mclogin && .\gradlew.bat build`
 
-Linux: `git clone https://github.com/VmLuRui262/Re-mclogin.git && ./gradlew.bat build`
+Linux: `git clone https://github.com/VmLuRui262/Re-mclogin.git && cd ./Re-mclogin && ./gradlew.bat build`
