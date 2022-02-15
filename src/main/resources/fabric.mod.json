@@ -21,11 +21,11 @@
   "environment": "server",
   "entrypoints": {
     "main": [
-      "org.molaei.mclogin.LoginMod"
+      "org.vmlurui.remclogin.LoginMod"
     ]
   },
   "mixins": [
-    "login.mixins.json"
+    "remclogin.mixins.json"
   ],
 
   "depends": {
