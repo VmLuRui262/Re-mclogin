@@ -18,3 +18,9 @@
 - /register `<newPassword>` `<confirmPassword>`
 - /login `<password>`
 - /password `<oldPassword>` `<newPassword>` `<confirmPassword>`
+## Build | 编译
+JDK: `JDK16`
+
+Windows: `git clone https://github.com/VmLuRui262/Re-mclogin.git && .\gradlew.bat build`
+
+Linux: `git clone https://github.com/VmLuRui262/Re-mclogin.git && ./gradlew.bat build`
