@@ -20,6 +20,7 @@
 - /password `<oldPassword>` `<newPassword>` `<confirmPassword>`
 ## Build | 编译
 You need to install JDK16 and above.
+
 你需要安装JDK16及以上。
 
 Windows: `git clone https://github.com/VmLuRui262/Re-mclogin.git && .\gradlew.bat build`
