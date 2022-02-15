@@ -13,6 +13,7 @@
 - ~~Maybe I'll add more~~
 - Add language files | 添加各语言的文件，而不是像现在一样输出两条不同语言的b话。
 - `/deregister` command will be added for this Mod | `/deregister`将会被添加。
+- Abbreviated commands | 缩写指令 [`/register` -> `/reg` , `/login` -> `/l` , `/password` -> `/passwd` ]
 ## Commands | 命令
 - /register `<newPassword>` `<confirmPassword>`
 - /login `<password>`
