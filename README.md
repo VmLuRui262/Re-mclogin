@@ -11,7 +11,8 @@ Fabric mod for Minecraft: Java Edition to protect offline mode servers adding /l
 - ~~Players can't chat or use commands (only /login and /register) until they log in~~
 - ~~Passwords are saved in `./registered-players.json`~~
 - ~~Maybe I'll add more~~
-
+- Add language files | 添加各语言的文件，而不是像现在一样输出两条不同语言的b话。
+- `/deregister` command will be added for this Mod | `/deregister`将会被添加。
 ## Commands | 命令
 - /register `<newPassword>` `<confirmPassword>`
 - /login `<password>`
