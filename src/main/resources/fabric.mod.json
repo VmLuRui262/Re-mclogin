@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "re.mclogin",
+  "id": "re-mclogin",
   "version": "${version}",
 
   "name": "Re-MCLogin",
