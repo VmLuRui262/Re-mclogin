@@ -25,10 +25,12 @@ public class LoginCommand {
 
                         if (!RegisteredPlayersJson.isPlayerRegistered(username)) {
                             ctx.getSource().sendFeedback(new LiteralText("§cYou're not registered! Use /register instead."), false);
+                            ctx.getSource().sendFeedback(new LiteralText("§c你还未在本服务器注册，请使用 /register 进行注册。"), false);
                         } else if (RegisteredPlayersJson.isCorrectPassword(username, password)) {
                             PlayerLogin playerLogin = LoginMod.getPlayer(ctx.getSource().getPlayer());
                             playerLogin.setLoggedIn(true);
                             ctx.getSource().sendFeedback(new LiteralText("§aLogged in."), false);
+                            ctx.getSource().sendFeedback(new LiteralText("§a登录成功。"), false);
                             if (!player.isCreative()) {
                                 player.setInvulnerable(false);
                             }
@@ -36,6 +38,7 @@ public class LoginCommand {
                         } else {
                             player.networkHandler.sendPacket(new PlaySoundIdS2CPacket(new Identifier("minecraft:entity.zombie.attack_iron_door"), SoundCategory.MASTER, player.getPos(), 100f, 0.5f));
                             ctx.getSource().sendFeedback(new LiteralText("§cIncorrect password!"), false);
+                            ctx.getSource().sendFeedback(new LiteralText("§c密码错误!"), false);
                         }
                         return 1;
         })));
