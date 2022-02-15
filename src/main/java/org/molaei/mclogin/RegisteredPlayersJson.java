@@ -68,5 +68,8 @@ public class RegisteredPlayersJson {
             e.printStackTrace();
         }
     }
+    public static void removeUsr(String username) {
+        jsonArray.remove(findPlayerObject(username));
+    }
 }
 
