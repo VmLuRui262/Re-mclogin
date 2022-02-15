@@ -27,7 +27,7 @@ public class RegisterCommand {
                             }
                             if (!password.equals(StringArgumentType.getString(ctx, "confirmPassword"))) {
                                 ctx.getSource().sendFeedback(new LiteralText("§cPasswords don't match! Repeat it correctly."), false);
-                                ctx.getSource().sendFeedback(new LiteralText("§c密码不正确!请重试。"), false);
+                                ctx.getSource().sendFeedback(new LiteralText("§c密码不一致!请重试。"), false);
                                 return 1;
                             }
                             String uuid = ctx.getSource().getPlayer().getUuidAsString();
