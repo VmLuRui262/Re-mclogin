@@ -14,10 +14,11 @@
 - Add language files | 添加各语言的文件，而不是像现在一样输出两条不同语言的b话。
 - `/deregister` command will be added for this Mod | `/deregister`将会被添加。
 - Abbreviated commands | 缩写指令 [`/register` -> `/reg` , `/login` -> `/l` , `/password` -> `/passwd` ]
-## Commands | 命令
+## Commands | 指令
 - /register `<newPassword>` `<confirmPassword>`
 - /login `<password>`
 - /password `<oldPassword>` `<newPassword>` `<confirmPassword>`
+- ~~/register `<UserName>`~~*Only OP
 ## Build | 编译
 You need to install JDK16 and above.~~No JDK19~~
 
