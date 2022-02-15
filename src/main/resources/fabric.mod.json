@@ -1,17 +1,17 @@
 {
   "schemaVersion": 1,
-  "id": "mclogin",
+  "id": "re.mclogin",
   "version": "${version}",
 
-  "name": "MCLogin",
-  "description": "Protection for offline-mode servers",
+  "name": "Re-MCLogin",
+  "description": "Protection for offline-mode servers. 针对离线服务器进行登录保护。",
   "authors": [
     "molaeiali"
   ],
   "contact": {
-    "homepage": "https://github.com/molaeiali/mclogin",
-    "sources": "https://github.com/molaeiali/mclogin",
-    "issues": "https://github.com/molaeiali/mclogin/issues"
+    "homepage": "https://github.com/VmLuRui262/Re-mclogin",
+    "sources": "https://github.com/VmLuRui262/Re-mclogin",
+    "issues": "https://github.com/VmLuRui262/Re-mclogin/issues"
   },
 
   "license": "GPLv2",
@@ -30,7 +30,7 @@
   "depends": {
     "fabricloader": ">=0.7.11",
     "fabric": "*",
-    "minecraft": "1.17.x"
+    "minecraft": "1.18.x"
   },
   "suggests": {
     "another-mod": "*"
