@@ -22,10 +22,12 @@ public class RegisterCommand {
                             String username = player.getEntityName();
                             if (RegisteredPlayersJson.isPlayerRegistered(username)) {
                                 ctx.getSource().sendFeedback(new LiteralText("§cYou're already registered! Use /login instead."), false);
+                                ctx.getSource().sendFeedback(new LiteralText("§c您已经注册!请使用 /login 进行登录。"), false);
                                 return 1;
                             }
                             if (!password.equals(StringArgumentType.getString(ctx, "confirmPassword"))) {
                                 ctx.getSource().sendFeedback(new LiteralText("§cPasswords don't match! Repeat it correctly."), false);
+                                ctx.getSource().sendFeedback(new LiteralText("§c密码不正确!请重试。"), false);
                                 return 1;
                             }
                             String uuid = ctx.getSource().getPlayer().getUuidAsString();
@@ -34,6 +36,7 @@ public class RegisterCommand {
                             playerLogin.setLoggedIn(true);
                             player.setInvulnerable(false);
                             ctx.getSource().sendFeedback(new LiteralText("§aSuccessfully registered."), false);
+                            ctx.getSource().sendFeedback(new LiteralText("§a注册成功"), false);
                             return 1;
         }))));
     }
