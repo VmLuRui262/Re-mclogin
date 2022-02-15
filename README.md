@@ -4,6 +4,10 @@
 适用于[Minecraft: Java Edition](https://www.minecraft.net/)的[Fabric](https://fabricmc.net/) Mod。为`online-mode = false`的服务器添加登录验证。
 
 这是个服务器mod，也就是说你不需要在客户端上安装它。
+
+If you like this repositories, please give a star⭐️ .
+
+如果你喜欢这个项目[仓库]，请点个star⭐️ 。
 ## Features | 展望未来
 - ~~Players are invulnerable until they log in~~
 - ~~Players can't interact with the world until they log in~~
@@ -19,7 +23,7 @@
 - /login `<password>`
 - /password `<oldPassword>` `<newPassword>` `<confirmPassword>`
 - ~~/register `<UserName>`~~*Only OP
-## Build | 编译
+## Build | 构建
 You need to install JDK16 and above.~~No JDK19~~
 
 你需要安装JDK16及以上。~~请不要使用JDK19~~
