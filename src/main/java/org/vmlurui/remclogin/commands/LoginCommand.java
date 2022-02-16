@@ -23,7 +23,10 @@ public class LoginCommand {
                         String username = ctx.getSource().getPlayer().getEntityName();
                         ServerPlayerEntity player = ctx.getSource().getPlayer();
 
-                        if (!RegisteredPlayersJson.isPlayerRegistered(username)) {
+                        if (playerLogin.isLoggedIn()) {
+                            ctx.getSource().sendFeedback(new LiteralText("§cYou are already logged in! Please don't log in again!"), false);}
+                            ctx.getSource().sendFeedback(new LiteralText("§c您已经登录了! 请不要再次登录!"), false);}
+                        else if (!RegisteredPlayersJson.isPlayerRegistered(username)) {
                             ctx.getSource().sendFeedback(new LiteralText("§cYou're not registered! Use /register instead."), false);
                             ctx.getSource().sendFeedback(new LiteralText("§c你还未在本服务器注册，请使用 /register 进行注册。"), false);
                         } else if (RegisteredPlayersJson.isCorrectPassword(username, password)) {
