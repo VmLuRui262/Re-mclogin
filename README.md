@@ -8,6 +8,11 @@
 If you like this repositories, please give a star⭐️ .
 
 如果你喜欢这个项目[仓库]，请点个star⭐️ 。
+
+###  Requirement | 前置
+
+- [Fabric-Api](https://minecraft.curseforge.com/projects/fabric/)
+
 ## Features | 展望未来
 - ~~Players are invulnerable until they log in~~
 - ~~Players can't interact with the world until they log in~~
@@ -28,6 +33,13 @@ You need to install JDK16 and above.~~No JDK19~~
 
 你需要安装JDK16及以上。~~请不要使用JDK19~~
 
-Windows: `git clone https://github.com/VmLuRui262/Re-mclogin.git && cd .\Re-mclogin && .\gradlew.bat build`
+- Windows: `git clone https://github.com/VmLuRui262/Re-mclogin.git && cd .\Re-mclogin && .\gradlew.bat build`
 
-Linux: `git clone https://github.com/VmLuRui262/Re-mclogin.git && cd ./Re-mclogin && ./gradlew build`
+- Linux: `git clone https://github.com/VmLuRui262/Re-mclogin.git && cd ./Re-mclogin && ./gradlew build`
+## Thank | 感谢以下同类型项目
+Without them there would be no  this repo.
+
+没有他们就没有这个项目。
+
+- [molaeiali](https://github.com/molaeiali) / [mclogin](https://github.com/molaeiali/mclogin)
+- [Londiuh](https://github.com/Londiuh) / [login](https://github.com/Londiuh/login)
