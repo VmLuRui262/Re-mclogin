@@ -14,15 +14,7 @@ If you like this repositories, please give a star⭐️ .
 - [Fabric-Api](https://minecraft.curseforge.com/projects/fabric/)
 
 ## Features | 展望未来
-- ~~Players are invulnerable until they log in~~
-- ~~Players can't interact with the world until they log in~~
-- ~~Players can't move until they log in~~
-- ~~Players can't chat or use commands (only /login and /register) until they log in~~
-- ~~Passwords are saved in `./registered-players.json`~~
-- ~~Maybe I'll add more~~
 - Add language files | 添加各语言的文件，而不是像现在一样输出两条不同语言的b话。
-- `/deregister` command will be added for this Mod | `/deregister`将会被添加。
-- ~~Abbreviated commands | 缩写指令 [`/register` -> `/reg` , `/login` -> `/l` , `/password` -> `/passwd` ]~~ *Done. | 已完成。
 ## Commands | 指令
 - /register `<newPassword>` `<confirmPassword>`
 - /login `<password>`
