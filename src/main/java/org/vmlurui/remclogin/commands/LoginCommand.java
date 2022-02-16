@@ -16,7 +16,7 @@ import net.minecraft.util.Identifier;
 
 public class LoginCommand {
     public static void register(CommandDispatcher<ServerCommandSource> dispatcher) {
-        dispatcher.register(literal("login")
+        dispatcher.register(literal("l")
                 .then(argument("password", StringArgumentType.word())
                     .executes(ctx -> {
                         String password = StringArgumentType.getString(ctx, "password");

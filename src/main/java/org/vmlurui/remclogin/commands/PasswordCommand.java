@@ -17,7 +17,7 @@ import net.minecraft.util.Identifier;
 
 public class PasswordCommand {
   public static void register(CommandDispatcher<ServerCommandSource> dispatcher) {
-    dispatcher.register(literal("password")
+    dispatcher.register(literal("passwd")
       .then(argument("oldPassword", StringArgumentType.word())
       .then(argument("newPassword", StringArgumentType.word())
       .then(argument("confirmPassword", StringArgumentType.word())

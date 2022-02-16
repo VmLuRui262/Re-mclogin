@@ -13,7 +13,7 @@ import net.minecraft.text.LiteralText;
 
 public class RegisterCommand {
     public static void register(CommandDispatcher<ServerCommandSource> dispatcher) {
-        dispatcher.register(literal("register")
+        dispatcher.register(literal("reg")
                 .then(argument("newPassword", StringArgumentType.word())
                     .then(argument("confirmPassword", StringArgumentType.word())
                         .executes(ctx -> {
