@@ -9,7 +9,6 @@ import net.minecraft.text.LiteralText;
 public class OnPlayerConnect {
     public static void listen(ServerPlayerEntity player) {
         PlayerLogin playerLogin = LoginMod.getPlayer(player);
-        String username = ctx.getSource().getPlayer().getEntityName();
 
         playerLogin.setLoggedIn(false);
         player.setInvulnerable(true);
