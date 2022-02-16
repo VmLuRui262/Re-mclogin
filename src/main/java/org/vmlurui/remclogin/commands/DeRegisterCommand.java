@@ -23,6 +23,9 @@ public class DeRegisterCommand {
         .executes(ctx -> {
             String userName = StringArgumentType.getString(ctx, "userName");
             PlayerLogin playerLogin = LoginMod.getPlayer(ctx.getSource().getPlayer());
+            ServerPlayerEntity player = ctx.getSource().getPlayer();
+
+
             if (!RegisteredPlayersJson.isPlayerRegistered(userName)) {
                 ctx.getSource().sendFeedback(new LiteralText("§cThis username does not exist or has been deleted!"), false);
                 ctx.getSource().sendFeedback(new LiteralText("§c该用户名不存在或已被删除!"), false);
