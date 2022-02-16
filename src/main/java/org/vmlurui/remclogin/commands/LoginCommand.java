@@ -22,10 +22,12 @@ public class LoginCommand {
                         String password = StringArgumentType.getString(ctx, "password");
                         String username = ctx.getSource().getPlayer().getEntityName();
                         ServerPlayerEntity player = ctx.getSource().getPlayer();
-
+                        PlayerLogin playerLogin = LoginMod.getPlayer(ctx.getSource().getPlayer());
+                        
                         if (playerLogin.isLoggedIn()) {
-                            ctx.getSource().sendFeedback(new LiteralText("§cYou are already logged in! Please don't log in again!"), false);}
-                            ctx.getSource().sendFeedback(new LiteralText("§c您已经登录了! 请不要再次登录!"), false);}
+                            ctx.getSource().sendFeedback(new LiteralText("§cYou are already logged in! Please don't log in again!"), false);
+                            ctx.getSource().sendFeedback(new LiteralText("§c您已经登录了! 请不要再次登录!"), false);
+                        }
                         else if (!RegisteredPlayersJson.isPlayerRegistered(username)) {
                             ctx.getSource().sendFeedback(new LiteralText("§cYou're not registered! Use /register instead."), false);
                             ctx.getSource().sendFeedback(new LiteralText("§c你还未在本服务器注册，请使用 /register 进行注册。"), false);
