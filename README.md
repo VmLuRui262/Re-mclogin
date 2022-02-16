@@ -27,7 +27,7 @@ If you like this repositories, please give a star⭐️ .
 - /register `<newPassword>` `<confirmPassword>`
 - /login `<password>`
 - /password `<oldPassword>` `<newPassword>` `<confirmPassword>`
-- ~~/register `<UserName>`~~*Only OP
+- ~~/deregister `<UserName>`~~*Only OP
 ## Build | 构建
 You need to install JDK16 and above.~~No JDK19~~
 
