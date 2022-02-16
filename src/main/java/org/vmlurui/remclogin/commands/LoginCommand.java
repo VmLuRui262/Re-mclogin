@@ -32,7 +32,6 @@ public class LoginCommand {
                             ctx.getSource().sendFeedback(new LiteralText("§cYou're not registered! Use /register instead."), false);
                             ctx.getSource().sendFeedback(new LiteralText("§c你还未在本服务器注册，请使用 /register 进行注册。"), false);
                         } else if (RegisteredPlayersJson.isCorrectPassword(username, password)) {
-                            PlayerLogin playerLogin = LoginMod.getPlayer(ctx.getSource().getPlayer());
                             playerLogin.setLoggedIn(true);
                             ctx.getSource().sendFeedback(new LiteralText("§aLogged in."), false);
                             ctx.getSource().sendFeedback(new LiteralText("§a登录成功。"), false);
