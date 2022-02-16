@@ -23,17 +23,16 @@ public class DeRegisterCommand {
         .executes(ctx -> {
             String userName = StringArgumentType.getString(ctx, "userName");
             PlayerLogin playerLogin = LoginMod.getPlayer(ctx.getSource().getPlayer());
-            if (!RegisteredPlayersJson.isPlayerRegistered(username)) {
+            if (!RegisteredPlayersJson.isPlayerRegistered(userName)) {
                 ctx.getSource().sendFeedback(new LiteralText("§cThis username does not exist or has been deleted!"), false);
                 ctx.getSource().sendFeedback(new LiteralText("§c该用户名不存在或已被删除!"), false);
             } else {
                 RegisteredPlayersJson.removeUsr(username);
-                PlayerLogin playerLogin = LoginMod.getPlayer(ctx.getSource().getPlayer());
                 player.setInvulnerable(false);
                 ctx.getSource().sendFeedback(new LiteralText("§cSuccessfully Deleted  "+ userName + "!"), false);
                 ctx.getSource().sendFeedback(new LiteralText("§c已删除用户名 "+ userName + "!"), false);
             }
             return 1;
         })));
-}
+    }
 }
