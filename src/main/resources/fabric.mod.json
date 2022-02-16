@@ -6,8 +6,9 @@
   "name": "Re-MCLogin",
   "description": "Protection for offline-mode servers. 针对离线服务器进行登录保护。",
   "authors": [
+    "VmLuRui#262",
     "molaeiali",
-    "VmLuRui#262"
+    "Londiuh"
   ],
   "contact": {
     "homepage": "https://github.com/VmLuRui262/Re-mclogin",
@@ -16,7 +17,7 @@
   },
 
   "license": "GPLv2",
-  "icon": "",
+  "icon": "assets/remclogin/icon.icon",
 
   "environment": "server",
   "entrypoints": {
