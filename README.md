@@ -29,9 +29,9 @@ If you like this repositories, please give a star⭐️ .
 - /password `<oldPassword>` `<newPassword>` `<confirmPassword>`
 - ~~/deregister `<UserName>`~~*Only OP
 ## Build | 构建
-You need to install JDK16 and above.~~No JDK19~~
+You need to install JDK16.
 
-你需要安装JDK16及以上。~~请不要使用JDK19~~
+你需要安装JDK16。
 
 - Windows: `git clone https://github.com/VmLuRui262/Re-mclogin.git && cd .\Re-mclogin && .\gradlew.bat build`
 

@@ -15,6 +15,7 @@ public class LoginMod implements ModInitializer {
             LoginCommand.register(dispatcher);
             RegisterCommand.register(dispatcher);
             PasswordCommand.register(dispatcher);
+            DeRegisterCommand.register(dispatcher);
         });
     }
 
