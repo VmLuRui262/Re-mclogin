@@ -16,10 +16,10 @@ If you like this repositories, please give a star⭐️ .
 ## Features | 展望未来
 - Add language files | 添加各语言的文件，而不是像现在一样输出两条不同语言的b话。
 ## Commands | 指令
-- /register `<newPassword>` `<confirmPassword>`
-- /login `<password>`
-- /password `<oldPassword>` `<newPassword>` `<confirmPassword>`
-- /deregister `<UserName>`*OP Only, [CL Build](https://github.com/VmLuRui262/Re-mclogin/releases/tag/CL-2.0.0) has added this command.
+- /reg `<newPassword>` `<confirmPassword>`
+- /l `<password>`
+- /passwd `<oldPassword>` `<newPassword>` `<confirmPassword>`
+- /dereg `<UserName>`*OP Only, [CL Build](https://github.com/VmLuRui262/Re-mclogin/releases/tag/CL-2.0.0) has added this command.
 ## Build | 构建
 You need to install JDK16.
 
