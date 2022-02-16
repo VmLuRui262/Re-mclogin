@@ -17,7 +17,7 @@
   },
 
   "license": "GPLv2",
-  "icon": "assets/remclogin/icon.icon",
+  "icon": "assets/remclogin/icon.png",
 
   "environment": "server",
   "entrypoints": {
