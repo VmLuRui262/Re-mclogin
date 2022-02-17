@@ -1,5 +1,7 @@
 # Re-McLogin | 重生:Minecraft登录模组
-[Fabric](https://fabricmc.net/) mod for [Minecraft: Java Edition](https://www.minecraft.net/) to protect offline mode servers adding `/login` and `/register`. This is a server-side mod, clients don't have to download it.
+![Re-McLogin_ICON](https://raw.githubusercontent.com/VmLuRui262/Re-mclogin/master/src/main/resources/assets/remclogin/icon.png)
+[![LICENSE](https://raw.githubusercontent.com/VmLuRui262/Re-mclogin/master/svg/LICENSE.svg)](https://raw.githubusercontent.com/VmLuRui262/Re-mclogin/master/LICENSE)
+[Fabric](https://fabricmc.net/) mod for [Minecraft: Java Edition](https://www.minecraft.net/) to protect offline mode servers adding `/l` and `/reg`. This is a server-side mod, clients don't have to download it.
 
 适用于[Minecraft: Java Edition](https://www.minecraft.net/)的[Fabric](https://fabricmc.net/) Mod。为`online-mode = false`的服务器添加登录验证。
 

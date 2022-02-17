@@ -68,7 +68,7 @@ public class RegisteredPlayersJson {
             e.printStackTrace();
         }
     }
-    public static void removeUsr(String username) {
+    public static void removePlayer(String username) {
         jsonArray.remove(findPlayerObject(username));
     }
 }

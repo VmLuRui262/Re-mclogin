@@ -27,10 +27,10 @@ public class DeRegisterCommand {
 
 
             if (!RegisteredPlayersJson.isPlayerRegistered(userName)) {
-                ctx.getSource().sendFeedback(new LiteralText("§cThis userName does not exist or has been deleted!"), false);
+                ctx.getSource().sendFeedback(new LiteralText("§cThis username does not exist or has been deleted!"), false);
                 ctx.getSource().sendFeedback(new LiteralText("§c该用户名不存在或已被删除!"), false);
             } else {
-                RegisteredPlayersJson.removeUsr(userName);
+                RegisteredPlayersJson.removePlayer(userName);
                 player.setInvulnerable(false);
                 ctx.getSource().sendFeedback(new LiteralText("§cSuccessfully Deleted  "+ userName + "!"), false);
                 ctx.getSource().sendFeedback(new LiteralText("§c已删除用户名 "+ userName + "!"), false);
