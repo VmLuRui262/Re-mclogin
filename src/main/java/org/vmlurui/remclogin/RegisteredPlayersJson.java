@@ -14,42 +14,42 @@ import org.mindrot.jbcrypt.BCrypt;
 public class RegisteredPlayersJson {
     private static final File REGISTERED_PLAYERS = new File("registered-players.json");
     private static final Gson gson = new GsonBuilder().setPrettyPrinting().create();
-    private static JsonArray jsonArray = new JsonArray();
+    private static JsonArray registeredPlayers = new JsonArray();
 
     public static boolean isPlayerRegistered(String username) {
-        return findPlayerObject(username) != null;
+        return findPlayer(username) != null;
     }
 
     public static boolean isCorrectPassword(String username, String password) {
-        JsonObject playerObject = findPlayerObject(username);
-        return playerObject != null && BCrypt.checkpw(password, playerObject.get("password").getAsString());
+        JsonObject player = findPlayer(username);
+        return player != null && BCrypt.checkpw(password, player.get("password").getAsString());
     }
 
-    private static JsonObject findPlayerObject(String username) {
-        JsonObject playerObject = null;
-        if (jsonArray.size() == 0) {
+    private static JsonObject findPlayer(String userName) {
+        JsonObject player = null;
+        if (registeredPlayers.size() == 0) {
             return null;
         }
-        for (int i = 0; i < jsonArray.size(); i++) {
-            JsonObject playerObjectIndex = jsonArray.get(i).getAsJsonObject(); 
-            if (playerObjectIndex.get("name").getAsString().equals(username)) {
-                playerObject = playerObjectIndex;
+        for (int i = 0; i < registeredPlayers.size(); i++) {
+            JsonObject playerObjectIndex = registeredPlayers.get(i).getAsJsonObject();
+            if (playerObjectIndex.get("name").getAsString().equals(userName)) {
+                player = playerObjectIndex;
                 break;
             }
         }
-        return playerObject;
+        return player;
     }
 
-    public static void save(String uuid, String username, String password) {
-        JsonObject jsonObject = new JsonObject();
-        jsonObject.addProperty("uuid", uuid);
-        jsonObject.addProperty("name", username);
-        jsonObject.addProperty("password", BCrypt.hashpw(password, BCrypt.gensalt()));
-        jsonArray.add(jsonObject);
+    public static void save(String UUID, String userName, String password) {
+        JsonObject player = new JsonObject();
+        player.addProperty("uuid", UUID);
+        player.addProperty("name", userName);
+        player.addProperty("password", BCrypt.hashpw(password, BCrypt.gensalt()));
+        registeredPlayers.add(player);
         try {
             //noinspection UnstableApiUsage
             BufferedWriter bufferedWriter = Files.newWriter(REGISTERED_PLAYERS, StandardCharsets.UTF_8);
-            bufferedWriter.write(gson.toJson(jsonArray));
+            bufferedWriter.write(gson.toJson(registeredPlayers));
             bufferedWriter.close();
         } catch (Exception e) {
             e.printStackTrace();
@@ -63,13 +63,14 @@ public class RegisteredPlayersJson {
         try {
             //noinspection UnstableApiUsage
             BufferedReader bufferedReader = Files.newReader(REGISTERED_PLAYERS, StandardCharsets.UTF_8);
-            jsonArray = gson.fromJson(bufferedReader, JsonArray.class);
+            registeredPlayers = gson.fromJson(bufferedReader, JsonArray.class);
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
-    public static void removeUsr(String username) {
-        jsonArray.remove(findPlayerObject(username));
+
+    public static void removePlayer(String userName) {
+        registeredPlayers.remove(findPlayer(userName));
     }
 }
 

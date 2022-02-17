@@ -7,12 +7,12 @@ import java.util.UUID;
 
 public class GetPlayer extends HashMap<UUID, PlayerLogin> {
     public PlayerLogin get(ServerPlayerEntity player) {
-        UUID uuid = player.getUuid();
-        if (containsKey(uuid)) {
-            return super.get(uuid);
+        UUID playerUUID = player.getUuid();
+        if (containsKey(playerUUID)) {
+            return super.get(playerUUID);
         }
         PlayerLogin newPlayer = new PlayerLogin(player);
-        put(uuid, newPlayer);
+        put(playerUUID, newPlayer);
         return newPlayer;
     }
 }
