@@ -19,7 +19,7 @@
 - 添加各语言的文件，而不是像现在一样输出两条不同语言的b话。
 - 为`/dereg`添加UserName TAB自动补全
 
-## Commands | 指令
+## 指令
 - /reg `<newPassword>` `<confirmPassword>`
 - /l `<password>`
 - /passwd `<oldPassword>` `<newPassword>` `<confirmPassword>`
