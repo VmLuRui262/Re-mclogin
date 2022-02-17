@@ -41,7 +41,7 @@ public class PasswordCommand {
                   ctx.getSource().sendFeedback(new LiteralText("§c新密码不能与旧密码相同!"), false);
                   } else {
                     String uuid = ctx.getSource().getPlayer().getUuidAsString();
-                    RegisteredPlayersJson.removeUsr(username);
+                    RegisteredPlayersJson.removePlayer(username);
                     RegisteredPlayersJson.save(uuid, username, newPasswd);
                     PlayerLogin playerLogin = LoginMod.getPlayer(ctx.getSource().getPlayer());
                     player.setInvulnerable(false);
