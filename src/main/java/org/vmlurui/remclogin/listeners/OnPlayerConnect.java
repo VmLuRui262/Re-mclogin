@@ -9,7 +9,9 @@ import net.minecraft.text.LiteralText;
 public class OnPlayerConnect {
     public static void listen(ServerPlayerEntity player) {
         PlayerLogin playerLogin = LoginMod.getPlayer(player);
-
+        //在如下区域填入进服提示
+        //实测中发现优先级比MCDReforged的插件Joinmotd的高
+        //会被顶掉
         playerLogin.setLoggedIn(false);
         player.setInvulnerable(true);
         player.sendMessage(new LiteralText("§9Welcome to the server, in order to play, you must log in.\n§eLog in using /login and register using /register"), false);

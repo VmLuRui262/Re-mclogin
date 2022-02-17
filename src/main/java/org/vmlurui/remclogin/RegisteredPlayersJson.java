@@ -68,7 +68,7 @@ public class RegisteredPlayersJson {
             e.printStackTrace();
         }
     }
-    public static void removePlayer(String username) {
+    public static void removePlayer(String username) { //在原项目没有这一段，被用于Passwd的修改密码及Dereg的删除账户
         jsonArray.remove(findPlayerObject(username));
     }
 }

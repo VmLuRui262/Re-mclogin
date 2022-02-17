@@ -20,16 +20,17 @@ public class RegisterCommand {
                             String password = StringArgumentType.getString(ctx, "newPassword");
                             ServerPlayerEntity player = ctx.getSource().getPlayer();
                             String username = player.getEntityName();
-                            if (RegisteredPlayersJson.isPlayerRegistered(username)) {
-                                ctx.getSource().sendFeedback(new LiteralText("§cYou're already registered! Use /login instead."), false);
-                                ctx.getSource().sendFeedback(new LiteralText("§c您已经注册!请使用 /login 进行登录。"), false);
+                            if (RegisteredPlayersJson.isPlayerRegistered(username)) {//判断是否存在此用户名 若存在 提示如下
+                                ctx.getSource().sendFeedback(new LiteralText("§cYou're already registered! Use /l instead."), false);
+                                ctx.getSource().sendFeedback(new LiteralText("§c您已经注册!请使用 /l 进行登录。"), false);
                                 return 1;
                             }
-                            if (!password.equals(StringArgumentType.getString(ctx, "confirmPassword"))) {
+                            if (!password.equals(StringArgumentType.getString(ctx, "confirmPassword"))) {//判断密码与确认密码不一致
                                 ctx.getSource().sendFeedback(new LiteralText("§cPasswords don't match! Repeat it correctly."), false);
                                 ctx.getSource().sendFeedback(new LiteralText("§c密码不一致!请重试。"), false);
                                 return 1;
                             }
+                            //若允许注册，运行如下
                             String uuid = ctx.getSource().getPlayer().getUuidAsString();
                             RegisteredPlayersJson.save(uuid, username, password);
                             PlayerLogin playerLogin = LoginMod.getPlayer(ctx.getSource().getPlayer());

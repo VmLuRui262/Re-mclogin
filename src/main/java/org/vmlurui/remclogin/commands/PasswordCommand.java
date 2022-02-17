@@ -28,18 +28,18 @@ public class PasswordCommand {
               String username = ctx.getSource().getPlayer().getEntityName();
               ServerPlayerEntity player = ctx.getSource().getPlayer();
 
-              if (!RegisteredPlayersJson.isPlayerRegistered(username)) {
+              if (!RegisteredPlayersJson.isPlayerRegistered(username)) {//判断 账户不存在 为 True
                  ctx.getSource().sendFeedback(new LiteralText("§cYou're not registered! Use /register instead."), false);
                  ctx.getSource().sendFeedback(new LiteralText("§c你还未在本服务器注册，请使用 /register 进行注册。"), false);
-              } else if (RegisteredPlayersJson.isCorrectPassword(username, oldPasswd)) {
-                if (!newPasswd.equals(confirmPassword)) {
+              } else if (RegisteredPlayersJson.isCorrectPassword(username, oldPasswd)) {//判断密码是否正确
+                if (!newPasswd.equals(confirmPassword)) {//判断新密码与确认密码不一致则
                     ctx.getSource().sendFeedback(new LiteralText("§cThe new password does not match the confirmation password! Repeat it correctly."), false);
                     ctx.getSource().sendFeedback(new LiteralText("§c新密码与确认密码不一致!请重试。"), false);
-                } else if(newPasswd.equals(oldPasswd)) {
+                } else if(newPasswd.equals(oldPasswd)) {//判断新密码与旧密码一致则
                   player.networkHandler.sendPacket(new PlaySoundIdS2CPacket(new Identifier("minecraft:entity.zombie.attack_iron_door"), SoundCategory.MASTER, player.getPos(), 100f, 0.5f));
                   ctx.getSource().sendFeedback(new LiteralText("§cThe new password cannot be the same as the old one!"), false);
                   ctx.getSource().sendFeedback(new LiteralText("§c新密码不能与旧密码相同!"), false);
-                  } else {
+                  } else {//不满足上述条件 判断允许修改
                     String uuid = ctx.getSource().getPlayer().getUuidAsString();
                     RegisteredPlayersJson.removePlayer(username);
                     RegisteredPlayersJson.save(uuid, username, newPasswd);
@@ -50,7 +50,7 @@ public class PasswordCommand {
                     return 1;
                  }
                  return 1;
-                } else {
+                } else {//34行if的else 判断密码与服务器上的不一致
                 player.networkHandler.sendPacket(new PlaySoundIdS2CPacket(new Identifier("minecraft:entity.zombie.attack_iron_door"), SoundCategory.MASTER, player.getPos(), 100f, 0.5f));
                 ctx.getSource().sendFeedback(new LiteralText("§cIncorrect old password!"), false);
                 ctx.getSource().sendFeedback(new LiteralText("§c旧密码错误!"), false);

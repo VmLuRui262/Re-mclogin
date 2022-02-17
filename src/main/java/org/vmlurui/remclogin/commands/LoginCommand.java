@@ -24,23 +24,23 @@ public class LoginCommand {
                         ServerPlayerEntity player = ctx.getSource().getPlayer();
                         PlayerLogin playerLogin = LoginMod.getPlayer(ctx.getSource().getPlayer());
                         
-                        if (playerLogin.isLoggedIn()) {
+                        if (playerLogin.isLoggedIn()) { //判断这个b是否登陆
                             ctx.getSource().sendFeedback(new LiteralText("§cYou are already logged in! Please don't log in again!"), false);
                             ctx.getSource().sendFeedback(new LiteralText("§c您已经登录了! 请不要再次登录!"), false);
                         }
-                        else if (!RegisteredPlayersJson.isPlayerRegistered(username)) {
+                        else if (!RegisteredPlayersJson.isPlayerRegistered(username)) {//判断这个b是否注册
                             ctx.getSource().sendFeedback(new LiteralText("§cYou're not registered! Use /register instead."), false);
                             ctx.getSource().sendFeedback(new LiteralText("§c你还未在本服务器注册，请使用 /register 进行注册。"), false);
-                        } else if (RegisteredPlayersJson.isCorrectPassword(username, password)) {
+                        } else if (RegisteredPlayersJson.isCorrectPassword(username, password)) {//登陆成功后做什么
                             playerLogin.setLoggedIn(true);
                             ctx.getSource().sendFeedback(new LiteralText("§aLogged in."), false);
                             ctx.getSource().sendFeedback(new LiteralText("§a登录成功。"), false);
                             if (!player.isCreative()) {
                                 player.setInvulnerable(false);
                             }
-                            player.networkHandler.sendPacket(new PlaySoundIdS2CPacket(new Identifier("minecraft:block.note_block.pling"), SoundCategory.MASTER, player.getPos(), 100f, 0f));
-                        } else {
-                            player.networkHandler.sendPacket(new PlaySoundIdS2CPacket(new Identifier("minecraft:entity.zombie.attack_iron_door"), SoundCategory.MASTER, player.getPos(), 100f, 0.5f));
+                            player.networkHandler.sendPacket(new PlaySoundIdS2CPacket(new Identifier("minecraft:block.note_block.pling"), SoundCategory.MASTER, player.getPos(), 100f, 0f));//放一个音符盒音效
+                        } else {//不满足以上条件判定为密码错误
+                            player.networkHandler.sendPacket(new PlaySoundIdS2CPacket(new Identifier("minecraft:entity.zombie.attack_iron_door"), SoundCategory.MASTER, player.getPos(), 100f, 0.5f));//放一个僵尸砸门的音效
                             ctx.getSource().sendFeedback(new LiteralText("§cIncorrect password!"), false);
                             ctx.getSource().sendFeedback(new LiteralText("§c密码错误!"), false);
                         }
