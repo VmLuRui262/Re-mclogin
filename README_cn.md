@@ -29,7 +29,7 @@
 
 - Windows: `git clone https://github.com/VmLuRui262/Re-mclogin.git && cd .\Re-mclogin && .\gradlew.bat build`
 
-- Linux: `git clone https://github.com/VmLuRui262/Re-mclogin.git && cd ./Re-mclogin && ./gradlew build`
+- Linux: `apt install -y openjdk-16-jdk && git clone https://github.com/VmLuRui262/Re-mclogin.git && cd ./Re-mclogin && ./gradlew build`
 
 ## 感谢以下同类型项目
 没有他们就没有这个项目。

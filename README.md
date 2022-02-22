@@ -26,7 +26,7 @@ You need to install JDK16.
 
 - Windows: `git clone https://github.com/VmLuRui262/Re-mclogin.git && cd .\Re-mclogin && .\gradlew.bat build`
 
-- Linux: `git clone https://github.com/VmLuRui262/Re-mclogin.git && cd ./Re-mclogin && ./gradlew build`
+- Linux: `apt install -y openjdk-16-jdk && git clone https://github.com/VmLuRui262/Re-mclogin.git && cd ./Re-mclogin && ./gradlew build`
 ## Thank
 Without them there would be no  this repo.
 
