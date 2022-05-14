@@ -23,7 +23,7 @@
 - /reg `<newPassword>` `<confirmPassword>`
 - /l `<password>`
 - /passwd `<oldPassword>` `<newPassword>` `<confirmPassword>`
-- /dereg `<UserName>`*只允许OP, 在 [CL Build](https://github.com/VmLuRui262/Re-mclogin/releases/tag/CL-2.0.0)  添加了此指令
+- /dereg `<UserName>`*只允许OP, 在 [CI Build](https://github.com/VmLuRui262/Re-mclogin/releases/tag/CI-2.0.0)  添加了此指令
 ## 构建
 你需要安装JDK16。
 
