@@ -20,7 +20,7 @@ If you like this repositories, please give a star⭐️ .
 - /reg `<newPassword>` `<confirmPassword>`
 - /l `<password>`
 - /passwd `<oldPassword>` `<newPassword>` `<confirmPassword>`
-- /dereg `<UserName>`*OP Only, [CL Build](https://github.com/VmLuRui262/Re-mclogin/releases/tag/CL-2.0.0) has added this command.
+- /dereg `<UserName>`*OP Only, [CI Build](https://github.com/VmLuRui262/Re-mclogin/releases/tag/CI-2.0.0) has added this command.
 ## Build
 You need to install JDK16.
 
