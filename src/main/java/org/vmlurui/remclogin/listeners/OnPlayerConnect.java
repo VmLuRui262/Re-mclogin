@@ -16,6 +16,6 @@ public class OnPlayerConnect {
         player.setInvulnerable(true);
         //player.sendMessage(new LiteralText("§9Welcome to the server, in order to play, you must log in.\n§eLog in using /login and register using /register"), false);
         //player.sendMessage(new LiteralText("§9欢迎来到(回到)本服务器\n§e登陆请使用指令 /l 注册请使用 /reg 。"), false);
-        player.networkHandler.sendPacket(new TitleS2CPacket(new LiteralText("§aWelcome Back!")));
+        //player.networkHandler.sendPacket(new TitleS2CPacket(new LiteralText("§aWelcome Back!")));
     }
 }
