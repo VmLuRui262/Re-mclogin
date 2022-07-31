@@ -1,6 +1,6 @@
 # Re-McLogin
 
-## A pull request was created for this repositories with molaeiali:master because of my mistake. I'm so sorry.:<
+## A pull request was created for this repositories to molaeiali:master because of my mistake. I'm so sorry.:<
 ## I think I need to learn "How to use Github"
 
 ![Re-McLogin_ICON](https://raw.githubusercontent.com/VmLuRui262/Re-mclogin/master/src/main/resources/assets/remclogin/icon.png)
