@@ -13,7 +13,7 @@ public class OnPlayerConnect {
         //在如下区域填入进服提示
         //实测中发现优先级比MCDReforged的插件Joinmotd的高
         //会被顶掉
-        username = player.getEntityName();
+        String username = player.getEntityName();
         playerLogin.setLoggedIn(false);
         player.setInvulnerable(true);
         if (!RegisteredPlayersJson.isPlayerRegistered(username)){
