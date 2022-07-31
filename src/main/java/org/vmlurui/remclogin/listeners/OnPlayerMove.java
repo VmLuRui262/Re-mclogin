@@ -13,7 +13,6 @@ public class OnPlayerMove {
         boolean isLoggedIn = playerLogin.isLoggedIn();
         if (!isLoggedIn) {
             player.teleport(player.getX(), player.getY(), player.getZ()); // teleport to sync client position
-            player.sendMessage(new LiteralText("You are not logged in."), false);
         }
         return isLoggedIn;
     }

@@ -14,7 +14,7 @@ public class OnPlayerConnect {
         //会被顶掉
         playerLogin.setLoggedIn(false);
         player.setInvulnerable(true);
-        player.sendMessage(Text.translatable("listeners.welcome", player.getEntityName()), false);
-        player.networkHandler.sendPacket(new TitleS2CPacket(Text.translatable("listeners.welcome_title")));
+        player.sendMessage(Text.literal("§9你好! " +  player.getEntityName() + " !欢迎来到本服务器\n§e请使用 /reg 在本服务器注册。"), false);
+        player.networkHandler.sendPacket(new TitleS2CPacket(Text.literal("§a欢迎!")));
     }
 }

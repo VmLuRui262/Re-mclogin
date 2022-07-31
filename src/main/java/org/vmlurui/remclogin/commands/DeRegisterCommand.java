@@ -7,13 +7,9 @@ import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.arguments.StringArgumentType;
 import static net.minecraft.server.command.CommandManager.literal;
 import static net.minecraft.server.command.CommandManager.argument;
-import net.minecraft.network.packet.s2c.play.TitleS2CPacket;
-import net.minecraft.network.packet.s2c.play.PlaySoundIdS2CPacket;
 import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.server.network.ServerPlayerEntity;
-import net.minecraft.sound.SoundCategory;
 import net.minecraft.text.Text;
-import net.minecraft.util.Identifier;
 
 public class DeRegisterCommand {
     public static void register(CommandDispatcher<ServerCommandSource> dispatcher) {
@@ -27,11 +23,11 @@ public class DeRegisterCommand {
 
 
             if (!RegisteredPlayersJson.isPlayerRegistered(username)) {//判断 账户不存在
-                ctx.getSource().sendFeedback(Text.translatable("command.deregister.dereg_failed"), false);
+                ctx.getSource().sendFeedback(Text.literal("§c该用户名不存在或已被删除!"), false);
             } else {//否则 视为账户存在 删除开始
                 RegisteredPlayersJson.removePlayer(username);
                 player.setInvulnerable(false);
-                ctx.getSource().sendFeedback(Text.translatable("command.deregister.dereg_success",username), false);
+                ctx.getSource().sendFeedback(Text.literal("§a"+ username +"注销成功!"), false);
             }
             return 1;
         })));

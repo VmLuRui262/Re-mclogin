@@ -11,7 +11,7 @@ public class LoginMod implements ModInitializer {
     @Override
     public void onInitialize() {
         RegisteredPlayersJson.read();
-        CommandRegistrationCallback.EVENT.register((dispatcher, dedicated) -> {//创建指令后一定要在此处注册，否则将无法触发
+        CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) -> {//创建指令后一定要在此处注册，否则将无法触发
             LoginCommand.register(dispatcher);
             RegisterCommand.register(dispatcher);
             PasswordCommand.register(dispatcher);
