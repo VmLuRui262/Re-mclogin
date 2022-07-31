@@ -4,7 +4,7 @@ import org.vmlurui.remclogin.LoginMod;
 import org.vmlurui.remclogin.PlayerLogin;
 import net.minecraft.server.network.ServerPlayNetworkHandler;
 import net.minecraft.server.network.ServerPlayerEntity;
-import net.minecraft.text.Text;
+import net.minecraft.text.LiteralText;
 
 public class OnPlayerMove {
     public static boolean canMove(ServerPlayNetworkHandler networkHandler) {

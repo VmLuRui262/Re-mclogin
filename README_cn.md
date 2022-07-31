@@ -1,5 +1,4 @@
 # 重生:Minecraft登录模组
-
 ![Re-McLogin_ICON](https://raw.githubusercontent.com/VmLuRui262/Re-mclogin/master/src/main/resources/assets/remclogin/icon.png)
 
 [![LICENSE](https://raw.githubusercontent.com/VmLuRui262/Re-mclogin/master/svg/LICENSE.svg)](https://raw.githubusercontent.com/VmLuRui262/Re-mclogin/master/LICENSE)
@@ -26,11 +25,11 @@
 - /passwd `<oldPassword>` `<newPassword>` `<confirmPassword>`
 - /dereg `<UserName>`*只允许OP, 在 [CI Build](https://github.com/VmLuRui262/Re-mclogin/releases/tag/CI-2.0.0)  添加了此指令
 ## 构建
-你需要安装JDK18。
+你需要安装JDK16。
 
 - Windows: `git clone https://github.com/VmLuRui262/Re-mclogin.git && cd .\Re-mclogin && .\gradlew.bat build`
 
-- Linux: `apt install -y openjdk-18-jdk && git clone https://github.com/VmLuRui262/Re-mclogin.git && cd ./Re-mclogin && ./gradlew build`
+- Linux: `apt install -y openjdk-16-jdk && git clone https://github.com/VmLuRui262/Re-mclogin.git && cd ./Re-mclogin && ./gradlew build`
 
 ## 感谢以下同类型项目
 没有他们就没有这个项目。

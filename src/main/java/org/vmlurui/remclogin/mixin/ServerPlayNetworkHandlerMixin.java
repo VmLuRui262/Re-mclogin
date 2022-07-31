@@ -1,6 +1,6 @@
 package org.vmlurui.remclogin.mixin;
 
-import org.vmlurui.remclogin.listeners.OnChatMessage;
+import org.vmlurui.remclogin.listeners.OnGameMessage;
 import org.vmlurui.remclogin.listeners.OnPlayerAction;
 import org.vmlurui.remclogin.listeners.OnPlayerMove;
 import net.minecraft.network.packet.c2s.play.ChatMessageC2SPacket;
@@ -30,11 +30,11 @@ public class ServerPlayNetworkHandlerMixin {
         }
     }
 
-    @Inject(method = "onChatMessage", at = @At("HEAD"), cancellable = true)
-    public void onChatMessage(ChatMessageC2SPacket packet, CallbackInfo ci) {
+    @Inject(method = "onGameMessage", at = @At("HEAD"), cancellable = true)
+    public void onGameMessage(ChatMessageC2SPacket packet, CallbackInfo ci) {
         //noinspection ConstantConditions
-        //if (!OnChatMessage.canSendMessage((ServerPlayNetworkHandler) (Object) this, packet)) {
+        if (!OnGameMessage.canSendMessage((ServerPlayNetworkHandler) (Object) this, packet)) {
             ci.cancel();
-        //}
+        }
     }
 }

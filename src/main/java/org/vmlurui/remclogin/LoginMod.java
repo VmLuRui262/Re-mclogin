@@ -2,7 +2,7 @@ package org.vmlurui.remclogin;
 
 import org.vmlurui.remclogin.commands.*;
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
+import net.fabricmc.fabric.api.command.v1.CommandRegistrationCallback;
 import net.minecraft.server.network.ServerPlayerEntity;
 
 public class LoginMod implements ModInitializer {
@@ -11,7 +11,7 @@ public class LoginMod implements ModInitializer {
     @Override
     public void onInitialize() {
         RegisteredPlayersJson.read();
-        CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) -> {//创建指令后一定要在此处注册，否则将无法触发
+        CommandRegistrationCallback.EVENT.register((dispatcher, dedicated) -> {//创建指令后一定要在此处注册，否则将无法触发
             LoginCommand.register(dispatcher);
             RegisterCommand.register(dispatcher);
             PasswordCommand.register(dispatcher);
