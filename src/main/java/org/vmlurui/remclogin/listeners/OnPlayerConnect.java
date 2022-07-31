@@ -14,10 +14,11 @@ public class OnPlayerConnect {
         //会被顶掉
         playerLogin.setLoggedIn(false);
         player.setInvulnerable(true);
-        if (!RegisteredPlayersJson.isPlayerRegistered(username)):
+        if (!RegisteredPlayersJson.isPlayerRegistered(username)){
             player.sendMessage(Text.literal("§9你好! " +  player.getEntityName() + " !欢迎来到本服务器\n§e请使用 /reg 在本服务器注册。"), false);
-        else:
+        }else{
             player.sendMessage(Text.literal("§9你好! " +  player.getEntityName() + " !欢迎回到本服务器\n§e请使用 /l 登录。"), false);
+        }
         player.networkHandler.sendPacket(new TitleS2CPacket(Text.literal("§a欢迎!")));
     }
 }
