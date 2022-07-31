@@ -14,7 +14,7 @@ If you like this repositories, please give a star⭐️ .
 - [Fabric-Api](https://minecraft.curseforge.com/projects/fabric/)
 
 ## Features
-- Add language files
+~~- Add language files~~
 - Add UserName TAB autocomplete for `/dereg`
 ## Commands
 - /reg `<newPassword>` `<confirmPassword>`
@@ -22,11 +22,11 @@ If you like this repositories, please give a star⭐️ .
 - /passwd `<oldPassword>` `<newPassword>` `<confirmPassword>`
 - /dereg `<UserName>`*OP Only, [CI Build](https://github.com/VmLuRui262/Re-mclogin/releases/tag/CI-2.0.0) has added this command.
 ## Build
-You need to install JDK16.
+You need to install JDK18.
 
 - Windows: `git clone https://github.com/VmLuRui262/Re-mclogin.git && cd .\Re-mclogin && .\gradlew.bat build`
 
-- Linux: `apt install -y openjdk-16-jdk && git clone https://github.com/VmLuRui262/Re-mclogin.git && cd ./Re-mclogin && ./gradlew build`
+- Linux: `apt install -y openjdk-18-jdk && git clone https://github.com/VmLuRui262/Re-mclogin.git && cd ./Re-mclogin && ./gradlew build`
 ## Thank
 Without them there would be no  this repo.
 

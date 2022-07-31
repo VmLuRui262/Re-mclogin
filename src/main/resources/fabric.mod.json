@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "re-mclogin",
+  "version": "${version}",
+
+  "name": "Re-MCLogin",
+  "description": "Protection for offline-mode servers. 针对离线服务器进行登录保护。",
+  "authors": [
+    "VmLuRui#262",
+    "molaeiali",
+    "Londiuh"
+  ],
+  "contact": {
+    "homepage": "https://github.com/VmLuRui262/Re-mclogin",
+    "sources": "https://github.com/VmLuRui262/Re-mclogin",
+    "issues": "https://github.com/VmLuRui262/Re-mclogin/issues"
+  },
+
+  "license": "GPLv2",
+  "icon": "assets/remclogin/icon.png",
+
+  "environment": "server",
+  "entrypoints": {
+    "main": [
+      "org.vmlurui.remclogin.LoginMod"
+    ]
+  },
+  "mixins": [
+    "remclogin.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.12.12",
+    "fabric": "*",
+    "minecraft": "1.19.x",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}

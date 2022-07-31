@@ -16,7 +16,7 @@
 - [Fabric-Api](https://minecraft.curseforge.com/projects/fabric/)
 
 ## 展望未来
-- 添加各语言的文件，而不是像现在一样输出两条不同语言的b话。
+~~- 添加各语言的文件，而不是像现在一样输出两条不同语言的b话。~~
 - 为`/dereg`添加UserName TAB自动补全
 
 ## 指令
@@ -25,11 +25,11 @@
 - /passwd `<oldPassword>` `<newPassword>` `<confirmPassword>`
 - /dereg `<UserName>`*只允许OP, 在 [CI Build](https://github.com/VmLuRui262/Re-mclogin/releases/tag/CI-2.0.0)  添加了此指令
 ## 构建
-你需要安装JDK16。
+你需要安装JDK18。
 
 - Windows: `git clone https://github.com/VmLuRui262/Re-mclogin.git && cd .\Re-mclogin && .\gradlew.bat build`
 
-- Linux: `apt install -y openjdk-16-jdk && git clone https://github.com/VmLuRui262/Re-mclogin.git && cd ./Re-mclogin && ./gradlew build`
+- Linux: `apt install -y openjdk-18-jdk && git clone https://github.com/VmLuRui262/Re-mclogin.git && cd ./Re-mclogin && ./gradlew build`
 
 ## 感谢以下同类型项目
 没有他们就没有这个项目。
