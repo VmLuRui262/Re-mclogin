@@ -1,4 +1,8 @@
 # Re-McLogin
+
+## A pull request was created for this repositories with molaeiali:master because of my mistake. I'm so sorry.:<
+## I think I need to learn "How to use Github"
+
 ![Re-McLogin_ICON](https://raw.githubusercontent.com/VmLuRui262/Re-mclogin/master/src/main/resources/assets/remclogin/icon.png)
 
 [![LICENSE](https://raw.githubusercontent.com/VmLuRui262/Re-mclogin/master/svg/LICENSE.svg)](https://raw.githubusercontent.com/VmLuRui262/Re-mclogin/master/LICENSE)
@@ -14,7 +18,7 @@ If you like this repositories, please give a star⭐️ .
 - [Fabric-Api](https://minecraft.curseforge.com/projects/fabric/)
 
 ## Features
-~~- Add language files~~
+- Add language files
 - Add UserName TAB autocomplete for `/dereg`
 ## Commands
 - /reg `<newPassword>` `<confirmPassword>`

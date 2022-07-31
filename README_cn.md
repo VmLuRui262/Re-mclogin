@@ -1,4 +1,5 @@
 # 重生:Minecraft登录模组
+
 ![Re-McLogin_ICON](https://raw.githubusercontent.com/VmLuRui262/Re-mclogin/master/src/main/resources/assets/remclogin/icon.png)
 
 [![LICENSE](https://raw.githubusercontent.com/VmLuRui262/Re-mclogin/master/svg/LICENSE.svg)](https://raw.githubusercontent.com/VmLuRui262/Re-mclogin/master/LICENSE)
@@ -16,7 +17,7 @@
 - [Fabric-Api](https://minecraft.curseforge.com/projects/fabric/)
 
 ## 展望未来
-~~- 添加各语言的文件，而不是像现在一样输出两条不同语言的b话。~~
+- 添加各语言的文件，而不是像现在一样输出两条不同语言的b话。
 - 为`/dereg`添加UserName TAB自动补全
 
 ## 指令
